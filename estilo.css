@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --corVerde: #1F3033;
+    --corRosa: #b85f77;
+    --corVerdeClaro: #99A66A;
+    --corLilas: #8F6DA6;
+    --corSombra: rgba(0, 0, 0, 0.21);
+}
+
+* {
+    margin: 0%;
+    box-sizing: border-box; /*Para fazer o efeito slide na vertical*/
+}
+
+body {
+    margin: 0%;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav {
+    position: absolute;
+    padding: 20px;
+}
+
+nav > a {
+    color: white;
+    font: normal 2vw "Madimi One";
+    text-decoration: none;
+    padding: 20px;
+    text-shadow: 2px 2px 1px var(--corSombra);
+}
+
+.container { /*Para fazer o efeito slide na vertical*/
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+    width: 0px;
+}
+
+section {
+    display: flex;    
+    scroll-snap-align: start; /*Para fazer o efeito slide na vertical*/
+    height: 100vh;    
+}
+
+#gif {
+    height: 35vw;
+}
+
+h1 {
+    color: white;
+    font: normal 3vw "Madimi One";
+    text-shadow: 2px 2px 1px var(--corSombra);
+}
+
+.introducao > h2 {
+    color: white;
+    margin-top: 1vw;
+    font: normal 2vw 'Arial';
+    width: 45vw;
+    text-align: justify;
+}
+
+#inicio {
+    background-color: var(--corVerde);
+    align-items: center;
+    justify-content: center;
+}
+
+#certificados {
+    background-color: var(--corVerdeClaro);
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo {
+    font: normal 3vw "Madimi One";
+    color: white;
+    padding: 1vw 4vw;
+    text-shadow: 2px 2px 1px var(--corSombra);
+    
+}
+
+#subtitulo {
+    font: normal 2vw 'Arial';
+    color: white;
+    width: 40vw;
+    padding: 1vw 4vw;
+    text-align: justify;
+    text-shadow: 1px 1px 1px var(--corSombra);
+}
+
+.imgsCert {
+    margin-top: 5vw;
+    margin-left: 8vw;
+}
+
+#certJs {
+    height: 15vw;
+    width: 20vw;
+    border-radius: 20%;
+    margin: 1vw;
+    box-shadow: 2px 2px 5px var(--corSombra);
+}
+
+#projetos {
+    background-color: var(--corRosa);
+    justify-content: center;
+    align-items: center;
+}
+
+.imgsProjetos {
+    margin-top: 5vw;
+    margin-left: 8vw;
+}
+
+#imgProjetos {
+    height: 16vw;
+    width: 22vw;
+    border-radius: 20%;
+    margin: 1vw;
+    box-shadow: 2px 2px 5px var(--corSombra);
+}
+
+#sobre {
+    background-color: var(--corLilas);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#tituloSobre {
+    font: normal 3vw "Madimi One";
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 1px var(--corSombra);
+}
+
+#perfil {
+    height: 20vw;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px var(--corSombra);
+    margin-top: 5vw;
+}
+
+.perfil {
+    animation: flutuar 3s infinite ease-in-out;
+}
+
+@keyframes flutuar {
+    0%{transform: translate(0,-4vw);}
+    50%{transform: translate(0, -3vw);}
+    100%{transform: translate(0, -4vw);}
+
+}
+
+#textoSobre {
+    font: normal 2vw 'Arial';
+    color: white;
+    width: 60vw;
+    text-align: justify;
+    text-indent: 4vw;
+    text-shadow: 1px 1px 1px var(--corSombra);
+}
+
+#contatos {
+    background-image: url(img/gifAllstar.gif);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fundoContatos {
+    background-color: rgba(0, 0, 0, 0.497);
+    padding: 5vw 4vw 8vw 4vw;
+    backdrop-filter: blur(5px);
+    border-radius: 10%;
+    
+}
+
+#tituloContatos {
+    font: normal 3vw "Madimi One";
+    color: white;
+    margin: 3vw;
+    text-shadow: 2px 2px 1px var(--corSombra);
+    text-align: center;
+}
+
+#imgLogos {
+    height: 6vw;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1px;
+    margin: 2vw;
+    justify-content: center;
+    align-items: center;
+}
